@@ -21,4 +21,16 @@ Date.prototype.format = function (format) {
     return format;
 };
 
-setInterval("document.getElementById('formatTime').innerText = (new Date()).format('yyyy.MM.dd hh:mm:ss');", 1000);
+userName = document.getElementById('username');
+userId = document.getElementById('userid');
+deptName = document.getElementById('deptname');
+placeName = document.getElementById('placename');
+formatTime = document.getElementById('formatTime')
+
+userName.innerText = '张三';
+userId.innerText = '123456765432123456';
+deptName.innerText = '电子信息与光学工程学院';
+placeName.innerText = '津南理科食堂一楼';
+formatTime.innerText = (new Date()).format('yyyy.MM.dd hh:mm:ss');
+
+setInterval("formatTime.innerText = (new Date()).format('yyyy.MM.dd hh:mm:ss');", 1000);
